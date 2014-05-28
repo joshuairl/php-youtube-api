@@ -132,7 +132,7 @@ class Youtube {
         $API_URL = $this->getApi('channels.list');
         $params = array(
             'forUsername' => $username,
-            'part' => 'id,snippet,contentDetails, statistics,topicDetails,invideoPromotion'
+            'part' => 'id,snippet,contentDetails,statistics,topicDetails,invideoPromotion'
         );
         $apiData = $this->api_get($API_URL, $params);
         return $this->decodeSingle($apiData);
@@ -143,7 +143,7 @@ class Youtube {
         $API_URL = $this->getApi('channels.list');
         $params = array(
             'id' => $id,
-            'part' => 'id,snippet,contentDetails, statistics,topicDetails,invideoPromotion'
+            'part' => 'id,snippet,brandingSettings,contentDetails,statistics,topicDetails,invideoPromotion'
         );
         $apiData = $this->api_get($API_URL, $params);
         return $this->decodeSingle($apiData);
