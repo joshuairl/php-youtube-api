@@ -174,7 +174,7 @@ class Youtube
         $API_URL = $this->getApi('channels.list');
         $params = array(
             'id' => $id,
-            'part' => 'id,snippet,contentDetails,statistics,invideoPromotion'
+            'part' => 'id,snippet,contentDetails,statistics,invideoPromotion,brandingSettings'
         );
         if($optionalParams){
             $params = array_merge($params, $optionalParams);
